@@ -1,58 +1,62 @@
 # Visual Studio Code project template for Linux kernel
 
-## Download and install [Visual Studio Code](https://code.visualstudio.com/)
+## Preparation
 
-## Install C/C++ extension for Visual Studio Code (`Ctrl`+`Shift`+`X`, search "`C/C++`")
+Download and install [Visual Studio Code](https://code.visualstudio.com/)
 
-## Built your kernel first
+Install C/C++ extension for Visual Studio Code (`Ctrl`+`Shift`+`X`, search "`C/C++`")
+
+Built your kernel first
 
 ```sh
 make <defconfig> # usually in arch/<arch>/configs/ folder
 make -j$(nproc)
 ```
 
-## Copy `.vscode` to the linux kernel folder
+## VSCode setup
 
-## Modify `.vscode/c_cpp_properties.json` to make IntelliSense work
+Copy `.vscode` to the linux kernel folder
 
-### Change ***&lt;arch>*** to target architecture, for examples:
+Modify `.vscode/c_cpp_properties.json` to make IntelliSense work
 
-* `arm` for ARM 32bit
-* `arm64` for ARM 64bit
-* `x86` for both x86 32bit and 64bit
+- Change ***&lt;arch>*** to target architecture, for examples:
 
-### Change ***&lt;gcc-compile-path>*** to your gcc compile path, for examples:
+  * `arm` for ARM 32bit
+  * `arm64` for ARM 64bit
+  * `x86` for both x86 32bit and 64bit
 
-* `/usr/bin/aarch64-linux-gnu-gcc` for ARM 64bit
-* `/usr/bin/x86_64-linux-gnu-gcc` for x86 64bit
+- Change ***&lt;gcc-compile-path>*** to your gcc compile path, for examples:
 
-### Change ***&lt;IntelliSenseMode>*** to the one of following:
+  * `/usr/bin/aarch64-linux-gnu-gcc` for ARM 64bit
+  * `/usr/bin/x86_64-linux-gnu-gcc` for x86 64bit
 
-* `linux-gcc-arm`
-* `linux-gcc-arm64`
-* `linux-gcc-x86`
-* `linux-gcc-x64`
+- Change ***&lt;IntelliSenseMode>*** to the one of following:
 
-## (Optional) Modify `.vscode/tasks.json` to make build tasks work
+  * `linux-gcc-arm`
+  * `linux-gcc-arm64`
+  * `linux-gcc-x86`
+  * `linux-gcc-x64`
 
-### Change ***&lt;arch>*** to target architecture, for examples:
+(Optional) Modify `.vscode/tasks.json` to make build tasks work
 
-* `arm` for ARM 32bit
-* `arm64` for ARM 64bit
-* `x86` for both x86 32bit and 64bit
+- Change ***&lt;arch>*** to target architecture, for examples:
 
-### Change **&lt;cross-compile>** to your cross compile path, for examples:
+  * `arm` for ARM 32bit
+  * `arm64` for ARM 64bit
+  * `x86` for both x86 32bit and 64bit
 
-* `aarch64-linux-gnu-` for ARM 64bit
-* `x86_64-linux-gnu-` for x86 64bit
+- Change **&lt;cross-compile>** to your cross compile path, for examples:
 
-### Change ***defconfig*** to your own kernel config
+  * `aarch64-linux-gnu-` for ARM 64bit
+  * `x86_64-linux-gnu-` for x86 64bit
 
-## Open with Visual Stdio Code
+- Change ***defconfig*** to your own kernel config
 
-```sh
-code .
-```
+- Open with Visual Stdio Code
+
+  ```sh
+  code .
+  ```
 
 ## Appendix
 
