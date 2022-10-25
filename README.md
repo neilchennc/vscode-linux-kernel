@@ -6,7 +6,7 @@ VSCode project template for Linux kernel source development.
 
 Download and install [Visual Studio Code](https://code.visualstudio.com/)
 
-Install C/C++ extension for Visual Studio Code (`Ctrl`+`Shift`+`X`, search "`C/C++`")
+Install C/C++ extension for Visual Studio Code (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd>, search "`C/C++`")
 
 Built your kernel first
 
@@ -76,6 +76,12 @@ Modify `.vscode/c_cpp_properties.json` to make IntelliSense work
   make O=output [extra_args]
   ```
 
+* Specific kernel source dir
+
+  ```sh
+  make C=<kernel-src> [extra_args]
+  ```
+
 * For more info
 
   ```sh
@@ -84,8 +90,8 @@ Modify `.vscode/c_cpp_properties.json` to make IntelliSense work
 
 ### VSCode
 
-* `Ctrl`+`P`: Search files by name
-* `Ctrl`+`Shift`+`F`: Search text in files
+* <kbd>Ctrl</kbd>+<kbd>P</kbd>: Search files by name
+* <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>: Search text in files
 
 ## References
 
