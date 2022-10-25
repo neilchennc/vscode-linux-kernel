@@ -1,0 +1,52 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "options": {
+        // Specify the cross compiler and arch in environment variable for all tasks
+        "env": {
+            "ARCH": "<arch>",
+            "CROSS_COMPILE": "<cross-compile>",
+        }
+    },
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "make (dtbs/kernel/modules)",
+            "command": "/usr/bin/make",
+            "args": [
+                "-j$(nproc)",
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "make distclean",
+            "command": "/usr/bin/make",
+            "args": [
+                "distclean"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "make defconfig",
+            "command": "/usr/bin/make",
+            "args": [
+                // Specify config files
+                "defconfig"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
