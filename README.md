@@ -1,5 +1,7 @@
 # Visual Studio Code project template for Linux kernel
 
+VSCode project template for Linux kernel source development.
+
 ## Preparation
 
 Download and install [Visual Studio Code](https://code.visualstudio.com/)
