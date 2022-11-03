@@ -1,23 +1,25 @@
 # Visual Studio Code project template for Linux kernel
 
-VSCode project template for Linux kernel source development.
+Visual Studio Code project template for Linux kernel source development and navigation.
 
 ## Preparation
 
 Download and install [Visual Studio Code](https://code.visualstudio.com/)
 
-Install C/C++ extension for Visual Studio Code (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd>, search "`C/C++`")
+Install C/C++ extension for Visual Studio Code (In VSCode, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd>, search "`C/C++`")
 
-Built your kernel first
+Build your kernel first (important, it will generate some files that VSCode needed)
 
 ```sh
-make <defconfig> # usually in arch/<arch>/configs/ folder
+make <your-defconfig> # usually in the arch/<arch>/configs/ folder
 make -j$(nproc)
 ```
 
 ## VSCode setup
 
 Copy `.vscode` to the linux kernel folder
+
+> *Alternatively, you could use existing templates **x86_64.vscode** or **arm64.vscode***
 
 Modify `.vscode/c_cpp_properties.json` to make IntelliSense work
 
@@ -39,7 +41,7 @@ Modify `.vscode/c_cpp_properties.json` to make IntelliSense work
   * `linux-gcc-x86`
   * `linux-gcc-x64`
 
-(Optional) Modify `.vscode/tasks.json` to make build tasks work
+Modify `.vscode/tasks.json` to make build tasks work (Optional)
 
 - Change ***&lt;arch>*** to target architecture, for examples:
 
@@ -54,7 +56,7 @@ Modify `.vscode/c_cpp_properties.json` to make IntelliSense work
 
 - Change ***defconfig*** to your own kernel config
 
-- Open with Visual Stdio Code
+Open with Visual Stdio Code
 
   ```sh
   code .
@@ -73,13 +75,13 @@ Modify `.vscode/c_cpp_properties.json` to make IntelliSense work
 * Specific kernel build output dir
 
   ```sh
-  make O=output [extra_args]
+  make O=<output-dir> [extra_args] ...
   ```
 
 * Specific kernel source dir
 
   ```sh
-  make C=<kernel-src> [extra_args]
+  make C=<kernel-src-dir> [extra_args] ...
   ```
 
 * For more info
