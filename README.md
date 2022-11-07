@@ -94,6 +94,7 @@ Open with Visual Stdio Code
 
 * <kbd>Ctrl</kbd>+<kbd>P</kbd>: Search files by name
 * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>: Search text in files
+* <kbd>F1</kbd>, type `Restart IntelliSense For Active File` *(type `Restart` and it should autosuggest)*
 
 ## References
 
