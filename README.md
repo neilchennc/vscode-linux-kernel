@@ -72,16 +72,16 @@ Open with Visual Stdio Code
   make V=1
   ```
 
-* Specific kernel build output dir
+* Specific kernel build output directory
 
   ```sh
   make O=<output-dir> [extra_args] ...
   ```
 
-* Specific kernel source dir
+* Change to kernel directory
 
   ```sh
-  make C=<kernel-src-dir> [extra_args] ...
+  make -C <kernel-src-dir> [extra_args] ...
   ```
 
 * For more info
